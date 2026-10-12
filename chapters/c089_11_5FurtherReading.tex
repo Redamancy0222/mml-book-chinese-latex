@@ -1,0 +1,34 @@
+\section*{11.5 延伸阅读}
+\addcontentsline{toc}{section}{11.5 延伸阅读}
+\label{sec:11.5}
+
+在本章中，我们重点讨论了用于概率密度估计的混合模型。在统计学与机器学习中，存在着极为丰富的密度估计技术体系。在实际工程与数据分析中，人们除了参数化混合模型外，还广泛使用非参数化的直方图与核密度估计方法。
+
+\section*{直方图}
+\addcontentsline{toc}{subsection}{直方图}
+
+\emph{直方图（histogram）} 提供了表示连续概率密度的一种经典非参数方法，最早由 Pearson (1895) 提出。直方图的构建过程非常直观：将数据空间离散化划分为若干“区间箱”（bins），统计落入每个箱内的数据点数量；然后在每个区间的中心绘制一个矩形条，条柱的高度正比于该箱内的数据点频数。区间箱的宽度（bin size）是一个至关重要的超参数，选取过大容易导致欠拟合（过度平滑，抹杀局部细节），选取过小则极易导致过拟合（呈现杂乱的阶梯尖刺）。我们在 8.2.4 节讨论的交叉验证技术可用于在实践中自适应选择最优的箱宽。
+
+\section*{核密度估计}
+\addcontentsline{toc}{subsection}{核密度估计}
+
+\emph{核密度估计（kernel density estimation, KDE）} 由 Rosenblatt (1956) 与 Parzen (1962) 独立提出，是一种基于样本点的非参数光滑密度估计技术。给定 $ N $ 个独立同分布样本点，核密度估计量将潜在的数据生成概率分布表示为：
+
+\begin{equation}
+p(x) = \frac{1}{Nh}\sum_{n=1}^N k\left( \frac{x - x_n}{h} \right)
+\tag{11.75}
+\end{equation}
+
+其中 $ k(\cdot) $ 是一个核函数（即在实数域全域积分为 1 的非负光滑函数），$ h > 0 $ 是平滑带宽（bandwidth）超参数，其作用类似于直方图中的箱宽。
+
+需要特别指出的是，与 GMM 将固定的 $ K $ 个高斯分量赋予可学习的均值和权重不同，核密度估计直接在数据集中的 \textbf{每一个具体样本点} $ x_n $ 处都放置一个固定形状的核基元函数。常用的核函数包括均匀分布核、Epanechnikov 核以及高斯核。核密度估计与直方图密切相关，但通过选用光滑可导的核函数（如高斯核），KDE 能够严格保证所得整体密度估计曲线的光滑性与连续可微性。
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth,keepaspectratio]{docs/images/Figure11.13.png}
+\caption*{图 11.13}
+\end{figure}
+
+
+图 11.13 直观对比了针对 250 个观测数据点，采用直方图与采用高斯核密度估计所得出的拟合分布。
