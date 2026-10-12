@@ -29,10 +29,7 @@
 
 ---
 
-## ⚠️ 来源声明与致谢
-
-**这个仓库不是我翻译的，也不是我把书排版出来的。** 它只是把已有的中文译本「装订」成了一本书。请先了解清楚来源：
-
+## 来源声明与致谢
 | 角色 | 贡献 | 链接 |
 | --- | --- | --- |
 | **原著作者** | Marc Peter Deisenroth、A. Aldo Faisal、Cheng Soon Ong 撰写 *Mathematics for Machine Learning*（Cambridge University Press, 2020），并在官网免费公开全书 | [mml-book.com](https://mml-book.com) · [原书仓库](https://github.com/mml-book/mml-book.github.io) |
