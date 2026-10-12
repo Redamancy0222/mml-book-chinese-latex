@@ -173,8 +173,3 @@ RESULT: PASS
 
 ---
 
-<div align="center">
-
-**如果你觉得这本书有帮助，请给上游译者仓库 [dxxzst/mml-book-chinese](https://github.com/dxxzst/mml-book-chinese) 点一个 ⭐**
-
-</div>
