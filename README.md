@@ -12,8 +12,6 @@
 
 **➡️ [点击下载《机器学习中的数学》中文版完整 PDF（408 页）](https://github.com/Redamancy0222/mml-book-chinese-latex/releases/latest)**
 
-也可以在 [Releases 页面](https://github.com/Redamancy0222/mml-book-chinese-latex/releases) 找到全部历史版本。
-
 成品规格：
 
 | 项目 | 数值 |
@@ -35,17 +33,6 @@
 | **原著作者** | Marc Peter Deisenroth、A. Aldo Faisal、Cheng Soon Ong 撰写 *Mathematics for Machine Learning*（Cambridge University Press, 2020），并在官网免费公开全书 | [mml-book.com](https://mml-book.com) · [原书仓库](https://github.com/mml-book/mml-book.github.io) |
 | **中文译者** | 社区译者完成了**全部正文的中文翻译**——12 章、144 幅图、1,203 个公式。**这是本仓库全部内容的真正来源。** | [dxxzst/mml-book-chinese](https://github.com/dxxzst/mml-book-chinese) |
 | **本仓库** | 由 **DeepSeek** 把上述中文 Markdown 译本转换为 LaTeX 工程，处理排版细节，编译为单一 PDF | 你正在看的这里 |
-
-### 关于译者的工作
-
-[dxxzst/mml-book-chinese](https://github.com/dxxzst/mml-book-chinese) 是一份**质量极高**的译本：
-
-- 正文**无一页漏译**，无残留英文段落；
-- 399 处章节交叉引用**全部有效**，1,203 个公式编号跨文件严格连续；
-- 保留了原文 `斜体术语（English term）` 的双语标注风格，便于对照英文文献；
-- 译者还**补充了原书没有的内容**，例如 10.8 节的线性自动编码器 / 贝叶斯 PCA / 核 PCA、11.5 节的核密度估计（含专门绘制的插图），以及 8.2.3 节关于测试集与信息泄漏的说明，并把这些新增引用**一并补进了参考文献**。
-
-**在此向译者与原书作者致以诚挚感谢。** 没有他们的工作，本仓库无从谈起。
 
 ### 本仓库做了什么
 
@@ -176,22 +163,7 @@ RESULT: PASS
 
 ## 🤝 欢迎拉取校验
 
-**这个译本需要更多人来校验，而不是更多人来夸奖。**
-
 译文难免存在误译、术语不统一、公式笔误等问题。如果你发现任何问题，非常欢迎反馈：
-
-- **发现译文或公式错误** → 请到**上游译本仓库** [dxxzst/mml-book-chinese](https://github.com/dxxzst/mml-book-chinese) 提 Issue 或 PR，让修正惠及所有使用者；
-- **发现 PDF 排版问题**（公式溢出、图注错位、索引页码不准、缺字等）→ 请在本仓库提 [Issue](https://github.com/Redamancy0222/mml-book-chinese-latex/issues)；
-- **想直接改排版** → 欢迎 PR，但请优先修改 `md2tex.py` / `gen_main.py` 中的规则，而不是直接改 `chapters/` 下的生成产物（下次生成会被覆盖）。
-
-特别欢迎的校验方向：
-
-1. **术语一致性** —— 同一个英文术语在不同章节是否译法统一（如 spanning set / generating set、marginal likelihood / evidence）；
-2. **数学正确性** —— 公式、下标、转置符号、矩阵维度是否与原书一致；
-3. **行文可读性** —— 有没有生硬的直译；
-4. **排版缺陷** —— 目前仍有 5 处公式轻微超出页边、2 处字符缺字，欢迎帮忙定位。
-
----
 
 ## 📄 许可
 
